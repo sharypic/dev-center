@@ -30,13 +30,10 @@ Following attributes are supported:
 * **data-sharypic-timing**: milliseconds pause between each picture when widget is playing. Optional, default value is `4500`
 * **data-sharypic-autoplay**: when true, the widget will automatically change photo (see timing parameter). Optional, default value is `true`
 
-
 For information, following attributes will be supported soon:
 * **data-sharypic-thumbtray-enabled**: enable or disable the thumbtray features (contained in tabs). Optional, default value is `true`
 * **data-sharypic-share-enabled**: enable or disable the social sharing features (contained in tabs). Optional, default value is `true`
 * **data-sharypic-fullscreen-enabled**: enable or disable full screen mode. Optional, default value is `true`
-
-
 
 Then width and height of the widget must be configured through css.
 Minimal supported width is 320px and height is 240px.

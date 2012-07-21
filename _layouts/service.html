@@ -4,7 +4,7 @@ title: REST endpoints
 ---
 
 <h1>
-  {{ page.endpoint | capitalize }} services 2
+  {{ page.endpoint | capitalize }} services
 </h1>
 
 <table class='table table-bordered services-summary'>
@@ -32,7 +32,7 @@ title: REST endpoints
     </div>
 
     <div class='sample-url'>
-      {{ item[1].sample_url }}
+      <a class='copy-paste' href='#'>{{ item[1].sample_url }}</a>
       <a class='btn btn-sharypic see-response' href='#'>
         Response
         <i class='icon-chevron-down icon-white'></i>

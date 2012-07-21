@@ -49,12 +49,11 @@ body {
   background: transparent url(/dev-center/img/sharypic.png) 0 3px no-repeat;
   background-size: 96px 40px;
   margin-top: -4px;
-
   color: transparent;
 }
 
 .site-name {
-  color: #d8d8d8;
+  color: #ededed;
   float: left;
   font-family: 'StRydeRegular';
   font-size: 19px;
@@ -67,7 +66,7 @@ body {
 }
 
 body > .container {
-  margin-top: 50px;
+  margin: 50px auto 75px;
 }
 
 h1 {
@@ -76,6 +75,16 @@ h1 {
   font-weight: normal;
   font-size: 50px;
   font-family: 'MarkerfieldRegular';
+}
+
+h2 {
+  margin: 20px 20px 20px 0;
+  padding-bottom: 5px;
+  color: #4D4540;
+  font-weight: normal;
+  font-size: 40px;
+  font-family: 'MarkerfieldRegular';
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28)
 }
 
 /*
@@ -146,13 +155,21 @@ h1 {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding: 10px;
+  color: #4D4540;
+}
+.service .sample-url a.copy-paste {
+  color: #4D4540;
+}
+
+.service .sample-url a.copy-paste:hover, .service .sample-url a.copy-paste.hover {
+  text-decoration: underline;
 }
 
 .service .sample-url .see-response {
   font-family: 'Helvetica Neue', Arial, Helvetica;
   float: right;
   margin-top: -5px;
-  cursor:;
+  cursor: pointer;
 }
 
 .service .sample-response pre {
