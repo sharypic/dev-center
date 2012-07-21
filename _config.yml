@@ -1,2 +1,4 @@
 pygments: true
 baseurl: /dev-center
+lsi: false
+safe: true
