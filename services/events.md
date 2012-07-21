@@ -11,8 +11,7 @@ services:
       Returns detailed informations for an event.
     mandatory_params: [toto,titi,tutu]
     optional_params: [toto,titi,tutu]
-    sample_response: |
-      {
+    sample_response: | {
         "uid":"s278rj4ghg3m4gm4",
         "name":"gba11",
         "picture_count":393,
