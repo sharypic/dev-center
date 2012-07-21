@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/dev-center/stylesheets/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/dev-center/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/dev-center/stylesheets/main.css" media="screen" />
 
     <title>{{ page.title }} | sharypic developer center</title>
   </head>
@@ -25,7 +25,7 @@
           <span class='site-name'>developer center</span>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class='{% if page.title == "Overview" %}active{% endif %}'><a href="#">Overview</a></li>
+              <li class='{% if page.title == "Overview" %}active{% endif %}'><a href="/dev-center/index.html">Overview</a></li>
               <li class='{% if page.title == "Authentication" %}active{% endif %}'><a href="#">Authentication</a></li>
               <li class='dropdown {% if page.title == "REST endpoints" %}active{% endif %}'>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -33,11 +33,11 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="/services/events.html">Events</a></li>
-                  <li><a href="/services/pictures.html">Pictures</a></li>
+                  <li><a href="/dev-center/services/events.html">Events</a></li>
+                  <li><a href="/dev-center/services/pictures.html">Pictures</a></li>
                 </ul>
               </li>
-              <li class='dropdown {% if page.title == "Embed" %}active{% endif %}'><a href="/embed.html">Embed on your site</a></li>
+              <li class='dropdown {% if page.title == "Embed" %}active{% endif %}'><a href="/dev-center/embed.html">Embed on your site</a></li>
             </ul>
           </div>
         </div>
@@ -49,8 +49,8 @@
     </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="/javascripts/bootstrap.min.js"></script>
-  <script src="/javascripts/main.js"></script>
+  <script src="/dev-center/javascripts/bootstrap.min.js"></script>
+  <script src="/dev-center/javascripts/main.js"></script>
   </body>
 
 </html>

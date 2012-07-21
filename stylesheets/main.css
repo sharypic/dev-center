@@ -46,7 +46,7 @@ body {
 }
 
 .navbar .brand {
-  background: transparent url(/img/sharypic.png) 0 3px no-repeat;
+  background: transparent url(/dev-center/img/sharypic.png) 0 3px no-repeat;
   background-size: 96px 40px;
   margin-top: -4px;
 
@@ -178,14 +178,14 @@ Fonts
 
 @font-face {
   font-family: 'MarkerfieldRegular';
-  src: url('/fonts/markerfield-webfont.ttf') format('truetype');
+  src: url('/dev-center/fonts/markerfield-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'StRydeRegular';
-  src: url('/fonts/stryde-regular-webfont.ttf') format('truetype');
+  src: url('/dev-center/fonts/stryde-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
