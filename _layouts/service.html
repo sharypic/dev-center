@@ -1,0 +1,53 @@
+---
+layout: default
+title: REST endpoints
+---
+
+<h1>
+  {{ page.endpoint | capitalize }} services
+</h1>
+
+<table class='table table-bordered services-summary'>
+  {% for item in page.services %}
+  <tbody>
+    <tr>
+      <td class='verb'>{{ item[1].verb }}</td>
+      <td class='path'>{{ item[1].path }}</td>
+      <td class='excerpt'>{{ item[1].description | truncate: 50 }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+
+{% for item in page.services %}
+  <div class='service'>
+
+    <div class='header'>
+      <span class='verb'>
+        {{ item[1].verb }}
+      </span>
+      <span class='path'>
+        {{ item[1].path }}
+      </span>
+    </div>
+
+    <div class='sample-url'>
+      {{ item[1].sample_url }}
+      <a class='btn btn-sharypic see-response' href='#'>
+        Response
+        <i class='icon-chevron-down icon-white'></i>
+      </a>
+    </div>
+
+    <div class='sample-response collapse'>
+      {% highlight json %}{{item[1].sample_response}}{% endhighlight %}
+    </div>
+
+    <div class='description'>
+      {{ item[1].description | markdownify }}
+    </div>
+
+  </div>
+{% endfor %}
+
+
