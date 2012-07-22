@@ -1,17 +1,15 @@
 $(document).ready(function() {
 
-  $('.sample-url a.copy-paste').zclip({
+  $('.sample-url').zclip({
     path: '/dev-center/javascripts/ZeroClipboard.swf',
-    copy: function() {
-      return $(this).text();
-    }
+    copy: function() { return $(this).text(); },
+    afterCopy: function() { $(this).removeClass('hover') }
   });
 
   $('.highlight pre').zclip({
     path: '/dev-center/javascripts/ZeroClipboard.swf',
-    copy: function() {
-      return $(this).text();
-    }
+    copy: function() { return $(this).text(); },
+    afterCopy: function() { $(this).removeClass('hover') }
   });
 
   $('.see-response').click(function(e) {

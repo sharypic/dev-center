@@ -88,6 +88,28 @@ h2 {
 }
 
 /*
+  TEXT PAGES
+*/
+
+pre {
+  -webkit-transition: background ease-in 0.1s;
+}
+
+pre:hover, pre.hover {
+  background-color: rgba(131, 131, 131, 0.83);
+}
+
+pre:hover:before, pre.hover:before {
+  font-family: 'Helvetica Neue', Arial, Helvetica;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  content: 'Click to copy';
+  display: block;
+  position: absolute;
+}
+
+/*
   SERVICE SUMMARY
 */
 
@@ -157,12 +179,23 @@ h2 {
   padding: 10px;
   color: #4D4540;
 }
+
 .service .sample-url a.copy-paste {
   color: #4D4540;
 }
 
-.service .sample-url a.copy-paste:hover, .service .sample-url a.copy-paste.hover {
-  text-decoration: underline;
+.service .sample-url:hover, .service .sample-url.hover {
+  background-color: rgba(128, 128, 128, 0.58);
+}
+
+.service .sample-url:hover a.copy-paste, .service .sample-url.hover a.copy-paste {
+  text-decoration: none;
+  color: white;
+}
+
+.service .sample-url:hover a.copy-paste:after, .service .sample-url.hover a.copy-paste:after {
+  content: '(Click to copy)';
+  margin-left: 15px;
 }
 
 .service .sample-url .see-response {
