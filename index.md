@@ -5,9 +5,9 @@ layout: default
 
 ## Introduction
 
-Hey, welcome on sharypic developer center! This website will teach you:
+Hey, welcome on sharypic developer center. This website will teach you:
 
-* our APIs, that you can certainly use to build something great.
+* our APIs, that you can certainly use to build something great!
 * our [gallery widget](/dev-center/embed.html), that you can directly embed on your website.
 
 If you have a question or a specific requirement, feel free to reach us at [contact@sharypic.com](mailto:contact@sharypic.com)
