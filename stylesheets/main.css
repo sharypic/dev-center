@@ -45,6 +45,19 @@ body {
   font-family: 'Helvetica Neue', Arial, Helvetica;
 }
 
+a, a:visited {
+  color: #703B9F;
+}
+
+a:hover {
+  color: #703B9F;
+  text-decoration: underline;
+}
+
+li {
+  line-height: 27px;
+}
+
 .navbar .brand {
   background: transparent url(/dev-center/img/sharypic.png) 0 3px no-repeat;
   background-size: 96px 40px;
@@ -78,13 +91,17 @@ h1 {
 }
 
 h2 {
-  margin: 20px 20px 20px 0;
+  margin: 30px 20px 20px 0;
   padding-bottom: 5px;
   color: #4D4540;
   font-weight: normal;
   font-size: 40px;
   font-family: 'MarkerfieldRegular';
   border-bottom: 1px solid rgba(0, 0, 0, 0.28)
+}
+
+h2:first-child {
+  margin-top: 20px;
 }
 
 /*
@@ -180,29 +197,12 @@ pre:hover:before, pre.hover:before {
   color: #4D4540;
 }
 
-.service .sample-url a.copy-paste {
-  color: #4D4540;
-}
-
-.service .sample-url:hover, .service .sample-url.hover {
-  background-color: rgba(128, 128, 128, 0.58);
-}
-
-.service .sample-url:hover a.copy-paste, .service .sample-url.hover a.copy-paste {
-  text-decoration: none;
-  color: white;
-}
-
-.service .sample-url:hover a.copy-paste:after, .service .sample-url.hover a.copy-paste:after {
-  content: '(Click to copy)';
-  margin-left: 15px;
-}
-
 .service .sample-url .see-response {
   font-family: 'Helvetica Neue', Arial, Helvetica;
   float: right;
-  margin-top: -5px;
+  margin-top: -23px;
   cursor: pointer;
+  color: white;
 }
 
 .service .sample-response pre {
@@ -219,7 +219,58 @@ pre:hover:before, pre.hover:before {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-top: none;
   background: #FCFCFC;
-  padding: 15px;
+  padding: 15px 15px 0;
+}
+
+.service .params {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: none;
+  background: #FCFCFC;
+  padding: 15px 15px 0;
+}
+
+.service .params .params-title {
+  padding-bottom: 3px ;
+  font-weight: bold;
+  font-size: 14px;
+  color: #4D4540;
+}
+
+.service .params i {
+  float: right;
+  margin-top: 10px;
+  border-bottom: 1px solid #4D4540;
+}
+
+.service .params i.mandatory {
+  width: 745px;
+}
+
+.service .params i.optional {
+  width: 760px;
+}
+
+.service .params ul {
+  margin: 5px 0 15px;
+}
+
+.service .params li {
+  list-style-type: none;
+}
+
+
+
+.service .params .params-name {
+  font-family: 'Monaco', Arial, Helvetica;
+  font-size: 12px;
+  display: block;
+  width: 150px;
+  float: left;
+  color: #703B9F;
+}
+
+.service .params .params-description {
+  display: block;
 }
 
 /**

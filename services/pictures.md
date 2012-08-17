@@ -1,4 +1,0 @@
----
-layout: service
-endpoint: picture
----

@@ -3,4 +3,34 @@ title: Overview
 layout: default
 ---
 
-API overview
+## Introduction
+
+Hey, welcome on sharypic developer center! This website will teach you:
+
+* our APIs, that you can certainly use to build something great.
+* our [gallery widget](/dev-center/embed.html), that you can directly embed on your website.
+
+If you have a question or a specific requirement, feel free to reach us at [contact@sharypic.com](mailto:contact@sharypic.com)
+
+## API Overview
+
+All of our API endpoints are accessible on `https://api.sharypic.com/v1/` (https is mandatory).
+
+All services require authentication: you first have to [generate a personal API key](http://sharypic.com/user/api_key) (require to be signed in). And then you need to pass the key:
+
+* as a query string parameter: `https://api.sharypic.com/v1/user/events?API_KEY=...`
+* or as a http header: `curl -X DELETE --header "X-API-Key: ..." https://api.sharypic.com/v1/user/events/:event-uid`
+
+## REST conventions
+
+All services follow REST conventions, responding to conventional HTTP verbs (`GET`, `POST`, `PUT` and `DELETE`) with JSON documents.
+
+We also leverage on HTTP return codes in following circumstances:
+
+* `200` when everything went well!
+* `400` when request parameters are incorrect
+* `401` if user could not be authenticated (missing or bad `API_KEY`)
+* `403` if user is not authorized to perform an action on the given resource.
+* `404` if you try to perform an action on a non-existent resource.
+* `500` ... whoops!
+

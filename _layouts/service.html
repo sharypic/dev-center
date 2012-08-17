@@ -4,7 +4,7 @@ title: REST endpoints
 ---
 
 <h1>
-  {{ page.endpoint | capitalize }} services
+  {{ page.endpoint | capitalize }} endpoints
 </h1>
 
 <table class='table table-bordered services-summary'>
@@ -12,14 +12,16 @@ title: REST endpoints
   <tbody>
     <tr>
       <td class='verb'>{{ item[1].verb }}</td>
-      <td class='path'>{{ item[1].path }}</td>
-      <td class='excerpt'>{{ item[1].description | truncate: 50 }}</td>
+      <td class='path'><a href="#{{item[0]}}">{{ item[1].path }}</td>
+      <td class='excerpt'>{{ item[1].description | truncate: 100 }}</td>
     </tr>
   </tbody>
   {% endfor %}
 </table>
 
+
 {% for item in page.services %}
+  <a name="{{item[0]}}"></a>
   <div class='service'>
 
     <div class='header'>
@@ -32,20 +34,52 @@ title: REST endpoints
     </div>
 
     <div class='sample-url'>
-      <a class='copy-paste' href='#'>{{ item[1].sample_url }}</a>
-      <a class='btn btn-sharypic see-response' href='#'>
-        Response
-        <i class='icon-chevron-down icon-white'></i>
-      </a>
+      <div class=''>{{ item[1].sample_url }}</div>
+      {% if item[1].sample_response %}
+        <a class='btn btn-sharypic see-response' href='#'>
+          Response
+          <i class='icon-chevron-down icon-white'></i>
+        </a>
+      {% endif %}
     </div>
 
-    <div class='sample-response collapse'>
-      {% highlight javascript %}{{item[1].sample_response}}{% endhighlight %}
-    </div>
+    {% if item[1].sample_response %}
+      <div class='sample-response collapse'>
+        {% highlight javascript %}{{item[1].sample_response}}{% endhighlight %}
+      </div>
+    {% endif %}
+
 
     <div class='description'>
       {{ item[1].description | markdownify }}
     </div>
+
+    {% if item[1].mandatory_params or item[1].optional_params %}
+      <div class='params'>
+        {% if item[1].mandatory_params %}
+        <span class='params-title'>Mandatory parameters</span><i class='mandatory'></i>
+        <ul>
+          {% for param in item[1].mandatory_params %}
+            <li>
+              <span class='params-name'>{{ param[0] }}</span>
+              <span class='params-description'>{{ param[1] }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if item[1].optional_params %}
+        <span class='params-title'>Optional parameters</span><i class='optional'></i>
+        <ul>
+          {% for param in item[1].optional_params %}
+            <li>
+              <span class='params-name'>{{ param[0] }}</span>
+              <span class='params-description'>{{ param[1] }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    {% endif %}
 
   </div>
 {% endfor %}
