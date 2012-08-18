@@ -41,17 +41,17 @@ services:
     description: |
       Create a new event.
     mandatory_params:
-      name: event name
+      - {name: 'name', description: 'event name'}
     optional_params:
-      description: event description
-      pname: parameterized name of the event (if you want a http://sharypic.com/my-pname style url)
-      public: is the event public? (boolean)
-      hashtag: hashtag to use to crawl photos
-      begins_at: beginning date of event (UTC number of seconds since 1970)
-      ends_at: end date of event (UTC number of seconds since 1970)
-      location[lat]: event venue latitude
-      location[lng]: event venue longitude
-      location[name]: event venue address name
+      - {name: 'description', description: 'event description'}
+      - {name: 'pname', description: 'parameterized name of the event (if you want a http://sharypic.com/my-pname style url)'}
+      - {name: 'public', description: 'is the event public? (boolean)'}
+      - {name: 'hashtag', description: 'hashtag to use to crawl photos'}
+      - {name: 'begins_at', description: 'beginning date of event (UTC number of seconds since 1970)'}
+      - {name: 'ends_at', description: 'end date of event (UTC number of seconds since 1970)'}
+      - {name: 'location[lat]', description: 'event venue latitude'}
+      - {name: 'location[lng]', description: 'event venue longitude'}
+      - {name: 'location[name]', description: 'event venue address name'}
     sample_response: |
       {
         uid: "axn6vzlnp134168m",

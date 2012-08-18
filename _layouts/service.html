@@ -62,8 +62,8 @@ title: REST endpoints
         <ul>
           {% for param in item[1].mandatory_params %}
             <li>
-              <span class='params-name'>{{ param[0] }}</span>
-              <span class='params-description'>{{ param[1] }}</span>
+              <span class='params-name'>{{ param['name'] }}</span>
+              <span class='params-description'>{{ param['description'] }}</span>
             </li>
           {% endfor %}
         </ul>
@@ -71,11 +71,10 @@ title: REST endpoints
         {% if item[1].optional_params %}
         <span class='params-title'>Optional parameters</span><i class='optional'></i>
         <ul>
-
           {% for param in item[1].optional_params %}
             <li>
-              <span class='params-name'>{{ param[0] }}</span>
-              <span class='params-description'>{{ param[1] }}</span>
+              <span class='params-name'>{{ param['name'] }}</span>
+              <span class='params-description'>{{ param['description'] }}</span>
             </li>
           {% endfor %}
         </ul>
