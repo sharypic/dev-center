@@ -21,6 +21,7 @@ title: REST endpoints
 
 
 {% for item in page.services %}
+
   <a name="{{item[0]}}"></a>
   <div class='service'>
 
@@ -70,6 +71,7 @@ title: REST endpoints
         {% if item[1].optional_params %}
         <span class='params-title'>Optional parameters</span><i class='optional'></i>
         <ul>
+
           {% for param in item[1].optional_params %}
             <li>
               <span class='params-name'>{{ param[0] }}</span>
