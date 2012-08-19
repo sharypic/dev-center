@@ -37,7 +37,7 @@ services:
   post_event:
     verb: POST
     path: /user/events
-    sample_url: curl -F "access_token=ACCESS-TOKEN" http://api.sharypic.com/v1/events/
+    sample_url: 'curl --header "X-API-Key: API_KEY" http://api.sharypic.com/v1/user/events/ -F "name=New event"'
     description: |
       Create a new event.
     mandatory_params:
