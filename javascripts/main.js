@@ -11,6 +11,7 @@ $(document).ready(function() {
     $(".sample-response", $parent).collapse('toggle');
     $('.see-response i', $parent).toggleClass('icon-chevron-up');
     $('.see-response i', $parent).toggleClass('icon-chevron-down');
+    return false;
   });
 
 });
