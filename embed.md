@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Embed
+title: Embed on your site
 ---
 
 # Embeddable widgets
