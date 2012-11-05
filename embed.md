@@ -14,7 +14,7 @@ We recommend script integration whenever it is possible. Iframe being mainly pro
 You need to copy/paste the following snippet of code wherever you want. If you want to embed several widgets in the same page,  only the div part must be repeated.
 
 {% highlight html %}
-<div class="sharypic_widget" data-sharypic-uid='4sacwgos3b8s8w46' style='height: 240px; width: 320px;'/>
+<div class="sharypic-widget" data-sharypic-uid='4sacwgos3b8s8w46' style='height: 240px; width: 320px;'/>
 <script language='javascript'>
   (function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="http://js.sharypic.com/widget-loader-1.0.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})()
 </script>
