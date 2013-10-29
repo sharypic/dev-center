@@ -26,8 +26,9 @@ We also leverage on HTTP return codes in following circumstances:
 
 # Details
 
-## Events
-[Personal events](/api/events/personal.html)
+## User events
+[List events](/api/user/events.html)
+[Create event](/api/user/event_create.html)
 
 ## Collections
 
