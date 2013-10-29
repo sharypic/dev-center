@@ -7,6 +7,8 @@ All services require authentication: you first have to [generate a personal API 
 * as a query string parameter: `https://api.sharypic.com/v1/user/events?API_KEY=...`
 * or as a http header: `curl -X DELETE --header "X-API-Key: ..." https://api.sharypic.com/v1/user/events/:event-uid`
 
+Current API version is **1**
+
 ## REST conventions
 
 All services follow REST conventions, responding to conventional HTTP verbs (`GET`, `POST`, `PUT` and `DELETE`) with JSON documents.
@@ -20,8 +22,12 @@ We also leverage on HTTP return codes in following circumstances:
 * `404` if you try to perform an action on a non-existent resource.
 * `500` ... whoops!
 
-## Events
+--
 
+# Details
+
+## Events
+[Personal events](/api/events/personal.html)
 
 ## Collections
 
