@@ -32,8 +32,8 @@ We also leverage on HTTP return codes in following circumstances:
 # Details
 
 ## User events
-[List events](/api/user/events.html)
-[Create event](/api/user/event_create.html)
+* [List events](/dev-center/api/user/events.html)
+* [Create event](/dev-center/api/user/event_create.html)
 
 ## Collections
 
