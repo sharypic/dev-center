@@ -26,13 +26,17 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class='{% if page.title == "Overview" %}active{% endif %}'><a href="/dev-center/index.html">Overview</a></li>
-              <li class='dropdown {% if page.title == "REST endpoints" %}active{% endif %}'>
+              <li class='dropdown {% if page.title == "API endpoints" %}active{% endif %}'>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   REST endpoints
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="/dev-center/services/events.html">Events</a></li>
+                  {% for p in site.pages %}
+                    {% if p.layout == "service" %}
+                      <li><a href="{{site.baseurl}}{{p.url}}">{{p.endpoint | capitalize}}</a></li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
               </li>
               <li class='dropdown {% if page.title == "Embed" %}active{% endif %}'><a href="/dev-center/embed.html">Embed on your site</a></li>

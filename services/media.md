@@ -31,7 +31,11 @@ services:
   latest:
     verb: GET
     path: /user/events/:event-uid/collections/:collection-pname/media/lastest
-    param: length (default 20), order_direction, order_by (default media.taken_at), scoped_to
+    optional_params:
+      - {name: 'length', description: 'number of media to return', default: "20"}
+      - {name: 'order_direction', description: 'asc or desc', default: "desc when event is live, asc when event is over"}
+      - {name: 'order_by', description: 'field for ordering', default: "taken_at"}
+      - {name: 'scoped_to', description: 'limit media to pictures and/or videos', default: "pictures & videos"}
     sample_url: https://api.sharypic.com/v1/user/events/:event-uid/collections/all/media/latest.json?api_key=API_KEY
     description: 'Returns latest media (max 50) of a collection of an event.'
     sample_response: |
@@ -140,7 +144,7 @@ services:
         large_url: "https://dbfzbb3dp9m3.cloudfront.net/p/5267b508bd58becca10018f9/5267b512bd58be50e9001ada/5267b5261b3bf2d895000001/large-gba111320131023-24870-1yhllob.jpg?1382528296"
       }
 
- infos:
+  infos:
     verb: GET
     path: /user/events/:event-uid/media/:media-id/infos
     sample_url: https://api.sharypic.com/v1/user/events/:event-uid/media/:media-id/infos.json?api_key=API_KEY
