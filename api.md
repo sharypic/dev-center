@@ -7,7 +7,7 @@ title: Sharypic API
 
 All of our API endpoints are accessible on `https://api.sharypic.com/v1/` (HTTPS is mandatory).
 
-All services require authentication: you first have to [generate a personal API key](http://sharypic.com/user/api_key) (require to be signed in). And then you need to pass the key:
+All services require authentication: you first have to [generate a personal API key](https://www.sharypic.com/user/api_key) (require to be signed in). And then you need to pass the key:
 
 * as a query string parameter: `https://api.sharypic.com/v1/user/events?API_KEY=...`
 * or as a http header: `curl -X DELETE --header "X-API-Key: ..." https://api.sharypic.com/v1/user/events/:event-uid`
