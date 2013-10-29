@@ -1,4 +1,9 @@
-Returns events created by the user.
+---
+layout: default
+title: Sharypic API: list user events
+---
+
+*Description**: returns events created by the user.
 
 Authentication is required, otherwise a 401 error code will be returned.
 
