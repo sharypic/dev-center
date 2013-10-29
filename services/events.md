@@ -20,7 +20,7 @@ services:
           picture_count: 212,
           visible_picture_count: 204,
           cover_picture_url: null,
-          url: "http://sharypic.com/sample-event",
+          url: "https://www.sharypic.com/sample-event",
           location: {
             lat: 48.13,
             lng: 2.35,
@@ -49,7 +49,7 @@ services:
         picture_count: 212,
         visible_picture_count: 204,
         cover_picture_url: null,
-        url: "http://sharypic.com/sample-event",
+        url: "https://www.sharypic.com/sample-event",
         location: {
           lat: 48.13,
           lng: 2.35,
@@ -64,13 +64,13 @@ services:
   create:
     verb: POST
     path: /user/events
-    sample_url: 'curl --header "X-API-Key: API_KEY" http://api.sharypic.com/v1/user/events/ -F "name=New event"'
+    sample_url: 'curl --header "X-API-Key: API_KEY" https://api.sharypic.com/v1/user/events/ -F "name=New event"'
     description: 'Create a new event.'
     mandatory_params:
       - {name: 'name', description: 'event name'}
     optional_params:
       - {name: 'description', description: 'event description'}
-      - {name: 'pname', description: 'parameterized name of the event (if you want a http://sharypic.com/my-pname style url)'}
+      - {name: 'pname', description: 'parameterized name of the event (if you want a https://www.sharypic.com/my-pname style url)'}
       - {name: 'public', description: 'is the event public? (boolean)'}
       - {name: 'hashtag', description: 'hashtag to use to crawl photos'}
       - {name: 'begins_at', description: 'beginning date of event (UTC number of seconds since 1970)'}
@@ -89,7 +89,7 @@ services:
         picture_count: 212,
         visible_picture_count: 204,
         cover_picture_url: null,
-        url: "http://sharypic.com/sample-event",
+        url: "https://www.sharypic.com/sample-event",
         location: {
           lat: 48.13,
           lng: 2.35,
@@ -104,12 +104,12 @@ services:
   update:
     verb: PUT
     path: /user/events/:event-uid
-    sample_url: 'curl --header "X-API-Key: API_KEY" http://api.sharypic.com/v1/user/events/:event-uid -F "name=New event name"'
+    sample_url: 'curl --header "X-API-Key: API_KEY" https://api.sharypic.com/v1/user/events/:event-uid -F "name=New event name"'
     description: 'Updates one of your events.'
     optional_params:
       - {name: 'name', description: 'event name'}
       - {name: 'description', description: 'event description'}
-      - {name: 'pname', description: 'parameterized name of the event (if you want a http://sharypic.com/my-pname style url)'}
+      - {name: 'pname', description: 'parameterized name of the event (if you want a https://www.sharypic.com/my-pname style url)'}
       - {name: 'public', description: 'is the event public? (boolean)'}
       - {name: 'hashtag', description: 'hashtag to use to crawl photos'}
       - {name: 'begins_at', description: 'beginning date of event (UTC number of seconds since 1970)'}
@@ -128,7 +128,7 @@ services:
         picture_count: 212,
         visible_picture_count: 204,
         cover_picture_url: null,
-        url: "http://sharypic.com/sample-event",
+        url: "https://www.sharypic.com/sample-event",
         location: {
           lat: 48.13,
           lng: 2.35,
