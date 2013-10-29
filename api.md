@@ -26,16 +26,3 @@ We also leverage on HTTP return codes in following circumstances:
 * `403` if user is not authorized to perform an action on the given resource.
 * `404` if you try to perform an action on a non-existent resource.
 * `500` ... whoops!
-
---
-
-# Details
-
-## User events
-* [List events](/dev-center/api/user/events.html)
-* [Create event](/dev-center/api/user/event_create.html)
-
-## Collections
-
-
-## Media
