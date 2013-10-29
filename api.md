@@ -1,3 +1,8 @@
+---
+layout: default
+title: Sharypic API
+---
+
 ## API Overview
 
 All of our API endpoints are accessible on `https://api.sharypic.com/v1/` (HTTPS is mandatory).
