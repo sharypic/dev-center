@@ -32,8 +32,12 @@ var SHARYPIC_WS_SINCE_ENDPOINT = '/v1/user/events/:event-uid/collections/:collec
   @return  jquery Deferred                            : forbidden
  */
 function loadMedia(media, lastPictureId, async) {
-  var params = { length: 50, scoped_to: 'pictures'};
-  
+  var params = {
+    length: 50,
+    scoped_to: 'pictures',
+    api_key: "YOUR_API_KEY"
+  };
+
   // returned at first call
   // resolved at last or failure 
   // forwarded amongst call by continuous passing style
