@@ -5,9 +5,10 @@ title: Code spinnet
 
 ## Spinnets
 
-### Load all media 
+### Load all media
 
 Example of our Since endpoint, can be used to :
+
 * load all media of your event
 * poll new media incrementally
 
