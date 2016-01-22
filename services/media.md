@@ -32,7 +32,7 @@ services:
     verb: GET
     path: /user/events/:event-uid/collections/:collection-pname/media/lastest
     optional_params:
-      - {name: 'length', description: 'number of media to return', default: "20"}
+      - {name: 'length', description: 'number of media to return, default: 50'}
       - {name: 'order_direction', description: 'asc or desc', default: "desc when event is live, asc when event is over"}
       - {name: 'order_by', description: 'field for ordering', default: "taken_at"}
       - {name: 'scoped_to', description: 'limit media to pictures and/or videos', default: "pictures & videos"}
@@ -163,5 +163,57 @@ services:
         exif_fstop: "14/5",
         exif_iso: "3200"
       }
+
+  since:
+    verb: GET
+    path: /user/events/:event-uid/collections/:collection-pname/media/since
+    sample_url: https://api.sharypic.com/v1/user/events/:event-uid/collections/:collection-pname/media/since?length=50&scoped_to=pictures&api_key=API_KEY
+    description: 'Return media since a last media id.'
+    optional_params:
+      - {name: 'length', description: 'number of media to return, default: 50'}
+      - {name: 'order_direction', description: 'asc or desc', default: "desc when event is live, asc when event is over"}
+      - {name: 'order_by', description: 'field for ordering', default: "taken_at"}
+      - {name: 'scoped_to', description: 'limit media to pictures and/or videos', default: "pictures & videos"}
+      - {name: 'picture_id', description: 'last media id'}
+    sample_response: |
+      [
+        {
+          author_profile_photo_url: "//d26wx9sgnlbtbs.cloudfront.net/p_user/55e562578f8e2900820121f9/square-Venus_Brandenburger_Tor_-_Kopie.jpg?1444044669",
+          liker_names: [],
+          small_height: 200,
+          created_at: "2015-09-24T11:48:18.216Z",
+          liker_ids: [],
+          original_width: 1456,
+          original_height: 2592,
+          _macro_medium_type: 0,
+          large_height: 1823,
+          contributor_id: "u55e562578f8e2900820121f9",
+          title: "Venus-Of-Berlin_23-09-2015.jpg",
+          id: "5603e2fdb053bc1a5a000000",
+          remote_url: null,
+          exif_model: "HUAWEI Y550-L01",
+          profile_url: null,
+          owner_id: "55e562578f8e2900820121f9",
+          author_name: "SMB",
+          like_count: 2,
+          medium_url: "//d26wx9sgnlbtbs.cloudfront.net/p/55f684c754f345008200310f/5603d49f8c60cd008200aa27/5603e2fdb053bc1a5a000000/medium-Venus-Of-Berlin_23-09-201520150924-6746-84r8hx.jpg?1443095293",
+          small_url: "//d26wx9sgnlbtbs.cloudfront.net/p/55f684c754f345008200310f/5603d49f8c60cd008200aa27/5603e2fdb053bc1a5a000000/small-Venus-Of-Berlin_23-09-201520150924-6746-84r8hx.jpg?1443095293",
+          uid: "6g07ckj2631h902n",
+          large_url: "//d26wx9sgnlbtbs.cloudfront.net/p/55f684c754f345008200310f/5603d49f8c60cd008200aa27/5603e2fdb053bc1a5a000000/large-Venus-Of-Berlin_23-09-201520150924-6746-84r8hx.jpg?1443095293",
+          ext_share_count: {},
+          status: 3,
+          square_url: "//d26wx9sgnlbtbs.cloudfront.net/p/55f684c754f345008200310f/5603d49f8c60cd008200aa27/5603e2fdb053bc1a5a000000/square-Venus-Of-Berlin_23-09-201520150924-6746-84r8hx.jpg?1443095293",
+          address: null,
+          location: null,
+          small_width: 112,
+          page: null,
+          f_taken_at: 1443000828,
+          provider: "upload",
+          large_width: 1024,
+          thumbnail_url: "//d26wx9sgnlbtbs.cloudfront.net/p/55f684c754f345008200310f/5603d49f8c60cd008200aa27/5603e2fdb053bc1a5a000000/thumbnail-Venus-Of-Berlin_23-09-201520150924-6746-84r8hx.jpg?1443095293",
+          source_id: "5603d49f8c60cd008200aa27",
+          share_count: 0
+        }
+      ]
 
 ---
