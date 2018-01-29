@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 baseurl: /dev-center
 lsi: false
 safe: true
